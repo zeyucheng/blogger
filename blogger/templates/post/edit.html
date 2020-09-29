@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Post{% endblock %}
+
+{% block widget %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-4">
+    <div class="card-header">
+        Edit Post
+    </div>
+
+    <div class="card-body">
+        {% from "_formhelpers.html" import render_field %}
+        <form method="POST" action="">
+
+            {{ form.csrf_token }}
+            {{ render_field(form.title, class="form-control") }}
+            {{ render_field(form.content, class="form-control") }}
+
+            {{ form.submit(class="btn btn-outline-secondary") }}
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class='card card-profile text-center mt-4'>
+    <h5 class="card-header"></h5>
+    <div class='card-body'>
+        <img alt='' class='card-img-profile' width="128" height="128"
+             src="{{ url_for('static', filename='image/photos/' + user.profile_image) }}">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text text-muted mb-4">{{ user.posts | length }} posts</p>
+    </div>
+</div>

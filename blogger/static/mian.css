@@ -1,0 +1,26 @@
+.card-profile .card-header {
+  padding: 50px;
+}
+
+.card-img-profile {
+    border-radius: 50%;
+}
+
+.card-profile .card-img-profile {
+
+  margin-top: -105px;
+  margin-bottom: 25px;
+  border: 5px solid #eee;
+}
+
+
+.btn-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+
+<div class="card mt-4">
+    <div class="card-header">
+        My Profile
+    </div>
+
+    <div class="card-body">
+
+        {% from "_formhelpers.html" import render_field %}
+        <form method="POST" action="" enctype="multipart/form-data">
+
+            {{ form.csrf_token }}
+            {{ render_field(form.name, class="form-control") }}
+            {{ render_field(form.email, class="form-control") }}
+            {{ render_field(form.intro, class="form-control") }}
+            {{ render_field(form.image, class="form-control-file") }}
+
+            {{ form.submit(class="btn btn-outline-secondary") }}
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
